@@ -130,7 +130,7 @@ export class CdkDragDropConnectedSortingGroupExample {
 
   addGroup(){
     const object = {
-      id: 5,
+      id: this.groups.length,
       title: 'Theme 1',
       subthemes: [
         {
