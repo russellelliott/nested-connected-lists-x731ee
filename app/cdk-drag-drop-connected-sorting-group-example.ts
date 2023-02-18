@@ -81,7 +81,7 @@ export class CdkDragDropConnectedSortingGroupExample {
 
   addGroup(){
     const object = {
-      id: this.groups.length,
+      id: this.groups.length+1,
       title: 'Group 3',
       items: [{
         name: 'Item 1 - Group 3'
