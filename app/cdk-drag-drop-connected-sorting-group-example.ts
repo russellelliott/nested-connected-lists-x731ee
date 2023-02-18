@@ -11,7 +11,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class CdkDragDropConnectedSortingGroupExample {
 
-  groups = [
+  themes = [
     {
       id: 0,
       title: 'Theme 1',
@@ -72,16 +72,16 @@ export class CdkDragDropConnectedSortingGroupExample {
   }
 
   getConnectedList(): any[] {
-    return this.groups.map(x => `${x.id}`);
+    return this.themes.map(x => `${x.id}`);
   }
 
   dropGroup(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.groups, event.previousIndex, event.currentIndex);
+    moveItemInArray(this.themes, event.previousIndex, event.currentIndex);
   }
 
-  addGroup(){
+  addTheme(){
     const object = {
-      id: this.groups.length,
+      id: this.themes.length,
       title: 'Theme 1',
       subthemes: [
         {
@@ -103,7 +103,7 @@ export class CdkDragDropConnectedSortingGroupExample {
         },
       ],
     }
-    this.groups.push(object);
+    this.themes.push(object);
   }
 }
 

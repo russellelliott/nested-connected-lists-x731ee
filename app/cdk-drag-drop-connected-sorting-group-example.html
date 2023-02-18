@@ -1,18 +1,18 @@
-<button (click)="addGroup()">Add theme</button>
+<button (click)="addTheme()">Add theme</button>
 <div cdkDropList 
-[cdkDropListData]="groups" 
-(cdkDropListDropped)="dropGroup($event)">
-	<div cdkDropListGroup class="example-container" 
-  *ngFor="let group of groups" 
-  cdkDrag [cdkDragData]="group">
-		<h2>{{group.title}}</h2>
+[cdkDropListData]="themes" 
+(cdkDropListDropped)="droptheme($event)">
+	<div cdkDropListtheme class="example-container" 
+  *ngFor="let theme of themes" 
+  cdkDrag [cdkDragData]="theme">
+		<h2>{{theme.title}}</h2>
 		<div cdkDropList class="example-list" 
-    id={{group.id}}
-    [cdkDropListData]="group.subthemes" 
+    id={{theme.id}}
+    [cdkDropListData]="theme.subthemes" 
     (cdkDropListDropped)="dropItem($event)"
 		[cdkDropListConnectedTo]="getConnectedList()">
 			<div class="example-box" 
-      *ngFor="let item of group.subthemes" 
+      *ngFor="let item of theme.subthemes" 
       cdkDrag [cdkDragData]="item">
 				{{item.code[0]}}
 			</div>
