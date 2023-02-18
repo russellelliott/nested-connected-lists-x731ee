@@ -62,7 +62,7 @@ export class CdkDragDropConnectedSortingGroupExample {
 
   groups = [
     {
-      id: 1,
+      id: 0,
       title: 'Theme 1',
       subthemes: [
         {
@@ -85,6 +85,7 @@ export class CdkDragDropConnectedSortingGroupExample {
       ],
     },
     {
+      id: 1,
       title: 'Theme 2',
       subthemes: [
         {
@@ -105,7 +106,6 @@ export class CdkDragDropConnectedSortingGroupExample {
           hidden: true,
         },
       ],
-      id: 2,
     }
   ]
 
