@@ -78,6 +78,26 @@ export class CdkDragDropConnectedSortingGroupExample {
   dropGroup(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.groups, event.previousIndex, event.currentIndex);
   }
+
+  addGroup(){
+    const object = {
+      id: this.groups.length,
+      title: 'Group 3',
+      items: [{
+        name: 'Item 1 - Group 3'
+      },
+      {
+        name: 'Item 2 - Group 3'
+      },
+      {
+        name: 'Item 3 - Group 3'
+      },
+      {
+        name: 'Item 4 - Group 3'
+      }]
+    }
+    this.groups.push(object);
+  }
 }
 
 
