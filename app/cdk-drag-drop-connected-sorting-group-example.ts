@@ -11,7 +11,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class CdkDragDropConnectedSortingGroupExample {
 
-  groups = [{
+  /*groups = [{
     id: 1,
     title: 'Group 1',
     items: [{
@@ -58,7 +58,56 @@ export class CdkDragDropConnectedSortingGroupExample {
     {
       name: 'Item 4 - Group 3'
     }]
-  }];
+  }];*/
+
+  groups = [
+    {
+      id: 1,
+      title: 'Theme 1',
+      subthemes: [
+        {
+          code: [
+            'Value - work experience as a teacher',
+            'Value - work experience as a teacher',
+            'Value - work experience as a teacher',
+            'Value - work experience as a teacher',
+          ],
+          quote: '“They’re just like, give me stuff to do. That’s hard to work with. too much like class as opposed to research. So that’s why this is a really long quote – it allows us to show...”',
+          member: ['Person1', 'BM'],
+          hidden: true,
+        },
+        {
+          code: ['Value - work experience as a teacher'],
+          quote: '“They’re just like, give me stuff to do. That’s hard to work with. too much like class as opposed to research. So that’s why this is a really long quote – it allows us to show...”',
+          member: ['Person1', 'BM'],
+          hidden: true,
+        },
+      ],
+    },
+    {
+      title: 'Theme 2',
+      subthemes: [
+        {
+          code: [
+            'Value - work experience as a teacher',
+            'Value - work experience as a teacher',
+            'Value - work experience as a teacher',
+            'Value - work experience as a teacher',
+          ],
+          quote: '“They’re just like, give me stuff to do. That’s hard to work with. too much like class as opposed to research. So that’s why this is a really long quote – it allows us to show...”',
+          member: ['Person1', 'BM'],
+          hidden: true,
+        },
+        {
+          code: ['Value - work experience as a teacher'],
+          quote: '“They’re just like, give me stuff to do. That’s hard to work with. too much like class as opposed to research. So that’s why this is a really long quote – it allows us to show...”',
+          member: ['Person1', 'BM'],
+          hidden: true,
+        },
+      ],
+      id: 2,
+    }
+  ]
 
   dropItem(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
@@ -81,20 +130,27 @@ export class CdkDragDropConnectedSortingGroupExample {
 
   addGroup(){
     const object = {
-      id: this.groups.length+1,
-      title: 'Group 3',
-      items: [{
-        name: 'Item 1 - Group 3'
-      },
-      {
-        name: 'Item 2 - Group 3'
-      },
-      {
-        name: 'Item 3 - Group 3'
-      },
-      {
-        name: 'Item 4 - Group 3'
-      }]
+      id: 5,
+      title: 'Theme 1',
+      subthemes: [
+        {
+          code: [
+            'Value - work experience as a teacher',
+            'Value - work experience as a teacher',
+            'Value - work experience as a teacher',
+            'Value - work experience as a teacher',
+          ],
+          quote: '“They’re just like, give me stuff to do. That’s hard to work with. too much like class as opposed to research. So that’s why this is a really long quote – it allows us to show...”',
+          member: ['Person1', 'BM'],
+          hidden: true,
+        },
+        {
+          code: ['Value - work experience as a teacher'],
+          quote: '“They’re just like, give me stuff to do. That’s hard to work with. too much like class as opposed to research. So that’s why this is a really long quote – it allows us to show...”',
+          member: ['Person1', 'BM'],
+          hidden: true,
+        },
+      ],
     }
     this.groups.push(object);
   }
