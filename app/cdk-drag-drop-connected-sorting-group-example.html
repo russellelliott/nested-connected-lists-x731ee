@@ -1,7 +1,7 @@
 <button (click)="addTheme()">Add theme</button>
 <div cdkDropList 
 [cdkDropListData]="themes" 
-(cdkDropListDropped)="droptheme($event)">
+(cdkDropListDropped)="dropGroup($event)">
 	<div cdkDropListtheme class="example-container" 
   *ngFor="let theme of themes" 
   cdkDrag [cdkDragData]="theme">
